@@ -1,11 +1,12 @@
-Customer Segmentation using Unsupervised Learning (K-Means Clustering)
+# *****Customer Segmentation using Unsupervised Learning (K-Means Clustering)*****
 Overview
 
 This project performs end-to-end customer segmentation using unsupervised machine learning to identify behaviorally and economically distinct customer groups. The objective is to transform raw transactional and demographic data into actionable segments that can drive personalization, retention, and revenue optimization strategies.
 
 The notebook demonstrates a full analytical pipeline: data understanding, preprocessing, feature engineering, optimal cluster selection, model training, and interpretable cluster profiling.
 
-Problem Statement
+---
+### Problem Statement :
 
 Given a multi-dimensional customer dataset containing demographic attributes and purchasing behavior across channels, the goal is to:
 
@@ -16,8 +17,8 @@ Given a multi-dimensional customer dataset containing demographic attributes and
 - Translate statistical clusters into business-interpretable personas
 ---
 
-Methodology
-1. Data Preprocessing
+#### Methodology
+***1. Data Preprocessing***
 
 - Missing value handling and outlier sanity checks
 
@@ -38,7 +39,7 @@ Methodology
   - Web Visits
 ---
 
-2. Optimal Cluster Selection
+***2. Optimal Cluster Selection***
 
 The Elbow Method is used to determine the appropriate number of clusters by analyzing within-cluster sum of squares (WCSS) as a function of K.
 
@@ -47,7 +48,7 @@ Elbow Method Visualization
 
 ![Elbow Method](elbow_method.png)
 ---
-3. Clustering Algorithm
+***3. Clustering Algorithm***
 
 - Algorithm: K-Means
 
@@ -58,7 +59,7 @@ Elbow Method Visualization
 - Final K chosen based on Elbow inflection point
 ---
 
-4. Post-Clustering Analysis
+***4. Post-Clustering Analysis***
 
 - Cluster centroids transformed back to original feature scale
 
@@ -75,7 +76,7 @@ Elbow Method Visualization
   - Browsing-to-conversion behavior
 ---
 
-Cluster Insights
+### Cluster Insights :
 
 | Cluster | High-Level Persona                                                          |
 | ------- | --------------------------------------------------------------------------- |
@@ -92,7 +93,7 @@ Each cluster is quantitatively defined using mean values of income, age, total s
 
 ---
 
-Key Technical Strengths Demonstrated
+### Key Technical Strengths Demonstrated :
 
 - Proper use of scaling for distance-based learning
 
@@ -105,7 +106,7 @@ Key Technical Strengths Demonstrated
 - Reproducible, inspection-friendly analysis via Pandas profiling and visualization
 ---
 
-Business Applications
+### Business Applications :
 
 - Precision marketing and campaign personalization
 
