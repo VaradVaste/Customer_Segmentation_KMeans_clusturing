@@ -14,6 +14,7 @@ Discover natural groupings of customers without labeled outcomes
 Quantify how each segment differs in age, income, spending, and engagement
 
 Translate statistical clusters into business-interpretable personas
+---
 
 Methodology
 1. Data Preprocessing
@@ -35,6 +36,7 @@ Web Purchases
 Store Purchases
 
 Web Visits
+---
 
 2. Optimal Cluster Selection
 
@@ -44,7 +46,7 @@ Elbow Method Visualization
 
 
 ![Elbow Method](elbow_method.png)
-
+---
 3. Clustering Algorithm
 
 Algorithm: K-Means
@@ -54,6 +56,7 @@ Distance Metric: Euclidean
 Initialization: k-means++
 
 Final K chosen based on Elbow inflection point
+---
 
 4. Post-Clustering Analysis
 
@@ -70,6 +73,7 @@ Channel preference
 Purchase frequency
 
 Browsing-to-conversion behavior
+---
 
 Cluster Insights
 Cluster	High-Level Persona
@@ -93,6 +97,7 @@ Statistical to business translation of unsupervised outputs
 Clean separation between modeling and interpretation layers
 
 Reproducible, inspection-friendly analysis via Pandas profiling and visualization
+---
 
 Business Applications
 
