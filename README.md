@@ -9,33 +9,33 @@ Problem Statement
 
 Given a multi-dimensional customer dataset containing demographic attributes and purchasing behavior across channels, the goal is to:
 
-Discover natural groupings of customers without labeled outcomes
+- Discover natural groupings of customers without labeled outcomes
 
-Quantify how each segment differs in age, income, spending, and engagement
+- Quantify how each segment differs in age, income, spending, and engagement
 
-Translate statistical clusters into business-interpretable personas
+- Translate statistical clusters into business-interpretable personas
 ---
 
 Methodology
 1. Data Preprocessing
 
-Missing value handling and outlier sanity checks
+- Missing value handling and outlier sanity checks
 
-Feature scaling using Standardization to ensure distance-based model stability
+- Feature scaling using Standardization to ensure distance-based model stability
 
-Selection of economically and behaviorally meaningful variables:
+- Selection of economically and behaviorally meaningful variables:
 
-Age
+  - Age
 
-Annual Income
+  - Annual Income
 
-Total Spend
+  - Total Spend
 
-Web Purchases
+  - Web Purchases
 
-Store Purchases
+  - Store Purchases
 
-Web Visits
+  - Web Visits
 ---
 
 2. Optimal Cluster Selection
@@ -49,64 +49,70 @@ Elbow Method Visualization
 ---
 3. Clustering Algorithm
 
-Algorithm: K-Means
+- Algorithm: K-Means
 
-Distance Metric: Euclidean
+- Distance Metric: Euclidean
 
-Initialization: k-means++
+- Initialization: k-means++
 
-Final K chosen based on Elbow inflection point
+- Final K chosen based on Elbow inflection point
 ---
 
 4. Post-Clustering Analysis
 
-Cluster centroids transformed back to original feature scale
+- Cluster centroids transformed back to original feature scale
 
-Cluster-wise aggregation to create a cluster_summary table
+- Cluster-wise aggregation to create a cluster_summary table
 
-Business interpretation of each segment based on:
+- Business interpretation of each segment based on:
 
-Spending power
+  - Spending power
 
-Channel preference
+  - Channel preference
 
-Purchase frequency
+  - Purchase frequency
 
-Browsing-to-conversion behavior
+  - Browsing-to-conversion behavior
 ---
 
 Cluster Insights
-Cluster	High-Level Persona
-0	Low-income, low-spend, high-browse but low-conversion price-sensitive users
-1	Older, high-income, extremely high-value omnichannel loyal customers
-2	Senior, conservative, low-engagement and low-spending customers
-3	Upper-middle income, digitally active, moderate-to-high value customers
-4	Affluent, younger, store-focused premium buyers with minimal browsing
-5	Wealthy senior customers with very high spend and strong purchase intent
+
+| Cluster | High-Level Persona                                                          |
+| ------- | --------------------------------------------------------------------------- |
+| 0       | Low-income, low-spend, high-browse but low-conversion price-sensitive users |
+| 1       | Older, high-income, extremely high-value omnichannel loyal customers        |
+| 2       | Senior, conservative, low-engagement and low-spending customers             |
+| 3       | Upper-middle income, digitally active, moderate-to-high value customers     |
+| 4       | Affluent, younger, store-focused premium buyers with minimal browsing       |
+| 5       | Wealthy senior customers with very high spend and strong purchase intent    |
+
+
 
 Each cluster is quantitatively defined using mean values of income, age, total spend, web/store purchases, and visit frequency, enabling precise downstream targeting.
 
+---
+
 Key Technical Strengths Demonstrated
 
-Proper use of scaling for distance-based learning
+- Proper use of scaling for distance-based learning
 
-Data-driven selection of K instead of arbitrary choice
+- Data-driven selection of K instead of arbitrary choice
 
-Statistical to business translation of unsupervised outputs
+- Statistical to business translation of unsupervised outputs
 
-Clean separation between modeling and interpretation layers
+- Clean separation between modeling and interpretation layers
 
-Reproducible, inspection-friendly analysis via Pandas profiling and visualization
+- Reproducible, inspection-friendly analysis via Pandas profiling and visualization
 ---
 
 Business Applications
 
-Precision marketing and campaign personalization
+- Precision marketing and campaign personalization
 
-Loyalty program design for high-LTV clusters
+- Loyalty program design for high-LTV clusters
 
-Channel strategy optimization (web vs store)
+- Channel strategy optimization (web vs store)
 
-Churn risk identification for low-engagement segments
+- Churn risk identification for low-engagement segments
 
-Pricing and promotion sensitivity modeling
+- Pricing and promotion sensitivity modeling
